@@ -1,0 +1,15 @@
+@import '../../consts.scss';
+
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  height: calc(100vh - 8rem);
+  padding-top: 4rem;
+  color: $c4;
+  input,
+  button {
+    width: 12rem
+  }
+}

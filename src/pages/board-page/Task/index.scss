@@ -1,0 +1,44 @@
+@import '../../../consts';
+.task-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .task-item {
+    display: flex;
+    padding-bottom: 10px;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    .task-content {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $light;
+      border-radius: 3px;
+      box-shadow: 0px 1px 5px -2px $dark;
+      cursor: pointer;
+      div {
+        width: 85%;
+        padding: 0.7rem;
+      }
+      button {
+        &:hover {
+          filter: invert(72%) sepia(73%) saturate(6458%) hue-rotate(208deg) brightness(101%) contrast(99%);
+        }
+      }
+    }
+
+    button {
+      width: 30px;
+      height: 30px;
+      background-image: url('../../../../public/img/cancel.svg');
+      background-repeat: no-repeat;
+      background-size: 70%;
+      background-position: center;
+    }
+  }
+}

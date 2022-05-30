@@ -1,0 +1,13 @@
+.preloader-container {
+  width: 100%;
+  height: calc(88vh - 8rem);
+}
+.preloader {
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+  background-image: url('../../../public/img/preloader.svg');
+  width: 20%;
+  height: 100px;
+  margin: 12vh auto;
+}

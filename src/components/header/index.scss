@@ -1,0 +1,95 @@
+@import '../../consts.scss';
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  width: 100%;
+  height: 4rem;
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  button {
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    background-size: 100%;
+    color: $c4;
+    font-weight: 900;
+    &:hover {
+      filter: invert(72%) sepia(73%) saturate(6458%) hue-rotate(208deg) brightness(101%) contrast(99%);
+    }
+  }
+  .profile-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .signOut-btn {
+    width: 25px;
+    height: 25px;
+    background-image: url('../../../public/img/previous.svg');
+  }
+  .editProfile-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 150px;
+    height: 35px;
+    text-align: left;
+    img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  .home-btn {
+    background-image: url('../../../public/img/home.svg');
+  }
+  .add-board-btn {
+    display: flex;
+    align-items: center;
+    min-width: 180px;
+    gap: 10px;
+    img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    backdrop-filter: blur(5px);
+    background-color: hsla(0deg, 0%, 100%, 0.5);
+    box-shadow: 0 1rem 2rem rgb(53 83 102 / 30%);
+    border-radius: 0.5rem;
+    .header-content {
+      display: none;
+    }
+  }
+}
+
+.is-sticky {
+  backdrop-filter: blur(5px);
+  background-color: hsla(0, 0%, 100%, 0.5);
+  box-shadow: 0 1rem 2rem rgb(53 83 102 / 30%);
+  border-radius: 0.5rem;
+}
+
+.is-active {
+  height: 100vh;
+  align-items: flex-start;
+  padding-top: 30px;
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+  }
+}

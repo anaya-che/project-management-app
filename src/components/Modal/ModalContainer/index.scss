@@ -1,0 +1,133 @@
+@import '../../../consts';
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  
+}
+.modal-main {
+  position: fixed;
+  background: white;
+  width: 50%;
+  height: auto;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 5px;
+}
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem;
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1rem;
+    width: 55%;
+  }
+  button {
+    background-color: $c2;
+    color: $light;
+    width: 10rem;
+    margin: 0 auto;
+    height: 2rem;
+    border-radius: 0.15rem;
+    background-color: $c2;
+    color: $light;
+    transition: 0.4s ease-in-out;
+    &:hover {
+      background-color: $c4;
+    }
+  }
+  .btn-group {
+    display: flex;
+    gap: 0.5rem;
+    .cancel-btn {
+      background-color: $cancel;
+      &:hover {
+        background-color: $cancel_hov;
+      }
+    }
+  }
+  p {
+    padding: 2rem 0;
+  }
+  .view-task {
+    p {
+      padding: 0.7rem 0;
+    }
+    .task-field {
+      font-weight: bold;
+      color: $c4;
+    }
+    .file-container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-bottom: 15px;
+      .file {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .file-download {
+        width: 17px;
+        height: 17px;
+        background-image: url(../../../../public/img/download.svg);
+        background-repeat: no-repeat;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+        &:hover {
+          filter: opacity(0.5);
+        }
+      }
+    }
+  }
+}
+.modal-close {
+  position: absolute;
+  right: 0;
+  width: 35px;
+  height: 35px;
+  margin: 0.5rem;
+  background-image: url('../../../../public/img/close-modal.svg');
+  background-repeat: no-repeat;
+  &:hover {
+    filter: invert(99%) sepia(100%) saturate(2%) hue-rotate(173deg) brightness(116%) contrast(100%);
+  }
+}
+.error-message {
+  color: $error;
+  min-height: 1em;
+}
+
+.file-container {
+  display: flex;
+}
+.custom-file-input {
+  width: 30px;
+  color: transparent;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.custom-file-input::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../../../../public/img/upload.svg");
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+    &:hover {
+      filter: opacity(0.5);
+    }
+}
